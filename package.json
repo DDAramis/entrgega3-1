@@ -1,0 +1,21 @@
+{
+  "name": "mi-proyecto-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "@types/through2-map": "^3.0.4",
+    "through2-map": "^3.0.0"
+  }
+}
