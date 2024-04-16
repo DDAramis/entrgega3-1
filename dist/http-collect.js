@@ -26,9 +26,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const http = __importStar(require("http"));
 const url = process.argv[2];
 let totalData = '';
-http.get(url, (response) => {
+const request = http.get(url, (response) => {
     response.setEncoding('utf8');
     response.on('data', (chunk) => {
         totalData += chunk;
     });
+    response.on('end', () => {
+        console.log(totalData.length);
+        console.log(totalData);
+    });
+});
+request.on('error', (error) => {
+    console.error(`Error en la solicitud: ${error.message}`);
 });
